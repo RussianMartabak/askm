@@ -14,12 +14,12 @@ class CreateProfileTable extends Migration
     public function up()
     {
         Schema::create('profile', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_profile');
             $table->integer('umur');
             $table->text('alamat');
             $table->text('bio');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id_user')->on('user');
             $table->timestamps();
         });
     }

@@ -14,11 +14,11 @@ class CreateKomentarTable extends Migration
     public function up()
     {
         Schema::create('komentar', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_komentar');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id_user')->on('user');
             $table->unsignedBigInteger('pertanyaan_id');
-            $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan');
+            $table->foreign('pertanyaan_id')->references('id_pertanyaan')->on('pertanyaan');
             $table->text('komentar');
             $table->timestamps();
         });
