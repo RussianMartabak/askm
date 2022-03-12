@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\kategori;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriController extends Controller
 {
@@ -46,11 +47,13 @@ class KategoriController extends Controller
             'keterangan.required'    => 'keterangan harus diisi'
         ]
         );
-         
+
+        
         $kategori = new kategori;
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->keterangan = $request->keterangan;
         $kategori->save();  
+        Alert::success('Tambah', 'Tambah data kategori berhasil');
         return redirect('/kategori');  
     }
 

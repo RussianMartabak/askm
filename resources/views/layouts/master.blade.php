@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('dashmin/css/style.css')}}" rel="stylesheet">
+    @stack('style')
 </head>
 
 <body>
@@ -40,6 +41,7 @@
             </div>
         </div>
         <!-- Spinner End -->
+        @include('sweetalert::alert')
 
         @include('partials.sidebar')
         
@@ -102,6 +104,7 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('dashmin/js/main.js')}}"></script>
+    @stack('script')
 </body>
 
 </html>
