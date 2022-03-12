@@ -6,7 +6,7 @@
     <h2>Buat Kategori Baru</h2><br><br>
     <div class="form-group">
       <label>Nama Kategori</label><br>
-      <input type="text" name="nama_kategori" class="form-control weight:30%;" >
+      <input type="text" name="nama_kategori" class="form-control" >
     </div>
     @error('nama_kategori')
     <div class="alert alert-danger">{{ $message }}</div>

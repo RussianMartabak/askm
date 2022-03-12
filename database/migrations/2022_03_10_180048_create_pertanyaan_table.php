@@ -19,7 +19,7 @@ class CreatePertanyaanTable extends Migration
             $table->text('content');
             $table->string('thumbnail',45);
             $table->unsignedBigInteger('kategori_id');
-            $table->foreign('kategori_id')->references('id_kategori')->on('kategori');
+            $table->foreign('kategori_id')->references('id')->on('kategori');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

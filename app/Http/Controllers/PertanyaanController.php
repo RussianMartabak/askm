@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB; 
+use App\pertanyaan;
 
 class PertanyaanController extends Controller
 {
@@ -23,7 +25,8 @@ class PertanyaanController extends Controller
      */
     public function create()
     {
-        //
+        $kategori = DB::table('kategori')->get();
+        return view('pertanyaan.create_pertanyaan',compact('kategori'));
     }
 
     /**
@@ -34,7 +37,18 @@ class PertanyaanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judul'       => 'required ',
+            'content'     => 'required',
+            'kategori_id' => 'required'
+
+        ],
+        [
+            'judul.required'       => 'judul tidak boleh kosong',
+            'content.required'     => 'content harus diisi',
+            'kategori_id.required' => 'harus pilih salah satu kategori'
+        ]
+        );
     }
 
     /**
