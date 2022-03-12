@@ -18,3 +18,8 @@ Route::get('/', 'IndexController@Index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//CRUD kategori
+Route::resource('kategori','KategoriController');
+
+
