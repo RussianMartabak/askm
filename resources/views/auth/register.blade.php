@@ -66,6 +66,9 @@
                             <div class="form-floating mb-4">
                                 <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
+                                @error('password')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="form-floating mb-4">
                                 <input type="password" class="form-control" id="floatingPassword" name="password_confirmation" placeholder="Password">
