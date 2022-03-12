@@ -48,7 +48,7 @@
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-            @extends('partials.navbar')
+            @include('partials.navbar')
             
             <!-- Navbar End -->
 

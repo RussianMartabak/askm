@@ -9,16 +9,33 @@
         <input class="form-control border-0" type="search" placeholder="Search">
     </form>
     <div class="navbar-nav align-items-center ms-auto">
-        
+        @auth
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img class="rounded-circle me-lg-2" src="{{asset('dashmin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
-                <span class="d-none d-lg-inline-flex">John Doe</span>
+                <span class="d-none d-lg-inline-flex">{{Auth::user()->name}}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                 <a href="#" class="dropdown-item">My Profile</a>
-                <a href="#" class="dropdown-item">Log Out</a>
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Log Out</button>
+                </form>
+                
             </div>
         </div>
+        @endauth
+        @guest
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                
+                <span class="d-none d-lg-inline-flex">Belum Login</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                <a href="/login" class="dropdown-item">Log In</a>
+                <a href="/register" class="dropdown-item">Sign Up</a>
+            </div>
+        </div>
+        @endguest
     </div>
 </nav>
