@@ -10,5 +10,5 @@ Forum Tanya Jawab Sederhana
 
 ## ERD  
   
-![](https://i.imgur.com/phNYspQ.jpg)  
+![](https://i.imgur.com/phNYspQ.jpg "ERD")  
 
