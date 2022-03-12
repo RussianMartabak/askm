@@ -58,10 +58,16 @@
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingText" name="name" placeholder="jhondoe">
                                 <label for="floatingText">Username</label>
+                                @error('name')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
+                                @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="form-floating mb-4">
                                 <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
@@ -77,14 +83,20 @@
                             <div class="mb-4">
                                 <label for="umur">Umur</label>
                                 <input type="number" name="umur" class="form-control" id="umur">
+                                @error('umur')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="mb-4">
                                 <label for="alamat">Alamat</label>
                                 <textarea name="alamat" id="alamat" rows="5" class="form-control"></textarea>
+                                @error('alamat')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="mb-4">
                                 <label for="bio">Bio</label>
-                                <textarea name="alamat" id="bio" rows="5" class="form-control"></textarea>
+                                <textarea name="bio" id="bio" rows="5" class="form-control"></textarea>
                             </div>
                                 
                             

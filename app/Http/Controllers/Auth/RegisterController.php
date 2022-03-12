@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Profile;
 
 class RegisterController extends Controller
 {
@@ -73,6 +74,13 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        
+        Profile::create([
+            'umur' => $data['umur'],
+            'bio' => $data['bio'],
+            'alamat' => $data['alamat'],
+            'user_id' => $user->id,
+        ]);
+
+        return $user;
     }
 }
