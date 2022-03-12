@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\kategori;
 
 class IndexController extends Controller
 {
     //
     function Index() {
-        return view('index');
+        $kategori = kategori::all();
+        return view('index', compact('kategori'));
     }
 }
