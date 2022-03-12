@@ -30,11 +30,11 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Kategori</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="#" class="dropdown-item @yield("active-category")">Politik</a>
-                    <a href="#" class="dropdown-item @yield("active-category")">Hubungan Internasional</a>
-                    <a href="#" class="dropdown-item @yield("active-category")">IT</a>
-                    <a href="#" class="dropdown-item @yield("active-category")">Gaming</a>
-                </div>
+                    @foreach ($kategori as $unitKategori)
+                        <a href="#" class="dropdown-item">{{$unitKategori->nama_kategori}}</a>
+                    @endforeach
+                    <a href="/kategori/create" class="dropdown-item">Tambah Kategori</a>
+                   
             </div>
         </div>
     </nav>
