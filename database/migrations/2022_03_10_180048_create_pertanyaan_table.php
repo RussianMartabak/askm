@@ -21,7 +21,7 @@ class CreatePertanyaanTable extends Migration
             $table->unsignedBigInteger('kategori_id');
             $table->foreign('kategori_id')->references('id_kategori')->on('kategori');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id_user')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
