@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="container">
-    <h2 class="">{{ Auth::user()->name }}</h2><br>
-    <h4>{{ $pertanyaan->Judul }}</h4>
-    <p>{{ $pertanyaan->content }}</p>
+    <h2 class="">{{ $pertanyaan->Judul }}</h2><br>
+    <h4>Ditanyakan oleh {{ Auth::user()->name }}</h4>
+    {{ $pertanyaan->content }}
     <img src="{{asset('pertanyaan_img/'. $pertanyaan->thumbnail)}}" alt="">
     <br><br>
     <div class="input-group mb-3">
