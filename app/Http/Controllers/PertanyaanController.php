@@ -7,6 +7,7 @@ use DB;
 use App\pertanyaan;
 use App\kategori;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\komentar;
 
 class PertanyaanController extends Controller
 {
@@ -79,9 +80,10 @@ class PertanyaanController extends Controller
      */
     public function show($id)
     {
+       $komentar = komentar::where('pertanyaan_id', $id);
        $kategori = kategori::all();
        $pertanyaan = pertanyaan::where('id',$id)->first();
-       return view('pertanyaan.show_pertanyaan',compact('pertanyaan', 'kategori'));
+       return view('pertanyaan.show_pertanyaan',compact('pertanyaan', 'kategori', 'komentar'));
     }
 
     /**
