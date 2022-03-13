@@ -29,7 +29,7 @@ Route::group(['middleware' => ['auth']], function () {
     //CRUD
     Route::resource('pertanyaan','PertanyaanController');
     //fungsi create untuk comment, pakai post
-    Route::post('/komentar/create/{id}');
+    Route::post('/komentar/create/{id}', 'KomentarController@create');
 });
 
 

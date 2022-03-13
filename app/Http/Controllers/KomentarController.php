@@ -16,6 +16,6 @@ class KomentarController extends Controller
         $komentar->user_id = Auth::user()->id;
         $komentar->pertanyaan_id = $id;
         $komentar->save();
-
+        return redirect('/pertanyaan/' . $id);
     }
 }
