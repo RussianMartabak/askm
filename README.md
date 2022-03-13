@@ -12,3 +12,5 @@ Forum Tanya Jawab Sederhana
   
 ![](./erd.jpg "ERD")  
 
+## Link Demo  
+https://zts-forum.herokuapp.com/
