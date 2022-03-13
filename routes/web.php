@@ -19,11 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//CRUD kategori
-Route::resource('kategori','KategoriController');
 
-//CRUD
-Route::resource('pertanyaan','PertanyaanController');
+
+Route::group(['middleware' => ['auth']], function () {
+    //
+    //CRUD kategori
+    Route::resource('kategori','KategoriController');
+
+    //CRUD
+    Route::resource('pertanyaan','PertanyaanController');
+});
 
 
 

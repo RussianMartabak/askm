@@ -49,6 +49,13 @@ class PertanyaanController extends Controller
             'kategori_id.required' => 'harus pilih salah satu kategori'
         ]
         );
+        $pertanyaan = new pertanyaan;
+        $pertanyaan->Judul = $request['judul'];
+        $pertanyaan->content = $request['content'];
+        $pertanyaan->kategori_id = $request['kategori_id'];
+        $pertanyaan->save();
+        Alert::success('Submit Pertanyaan', 'Berhasil Membuat Pertanyaan');
+        return redirect('/');
     }
 
     /**
