@@ -21,14 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('dashmin/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{asset('dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('dashmin/lib/owlcarousel/assets/owl.carousel.min.css', true)}}" rel="stylesheet">
+    <link href="{{asset('dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css', true)}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('dashmin/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('dashmin/css/bootstrap.min.css', true)}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{asset('dashmin/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('dashmin/css/style.css', true)}}" rel="stylesheet">
 </head>
 
 <body>
@@ -113,16 +113,16 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('dashmin/lib/chart/chart.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/waypoints/waypoints.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/tempusdominus/js/moment.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <script src="{{asset('dashmin/lib/chart/chart.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/easing/easing.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/waypoints/waypoints.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/owlcarousel/owl.carousel.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/tempusdominus/js/moment.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/tempusdominus/js/moment-timezone.min.js', true)}}"></script>
+    <script src="{{asset('dashmin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js', true)}}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{asset('dashmin/js/main.js')}}"></script>
+    <script src="{{asset('dashmin/js/main.js', true)}}"></script>
 </body>
 
 </html>
