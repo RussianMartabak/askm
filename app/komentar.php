@@ -9,4 +9,7 @@ class komentar extends Model
     //
     protected $table = 'komentar';
     protected $fillable = ['user_id', 'pertanyaan_id', 'komentar'];
+    public function user() {
+        return $this->hasOne('App\User');
+    }
 }
