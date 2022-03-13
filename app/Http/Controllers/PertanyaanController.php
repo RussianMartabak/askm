@@ -15,10 +15,12 @@ class PertanyaanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
+        $kategori = kategori::all();
         $pertanyaan = pertanyaan::all();
-        return view('pertanyaan.index_pertanyaan', compact('pertanyaan'));
+        return view('pertanyaan.index_pertanyaan', compact('pertanyaan', 'kategori'));
     }
 
     /**
@@ -28,8 +30,9 @@ class PertanyaanController extends Controller
      */
     public function create()
     {
+        $kategori = kategori::all();
         $kategori_id = DB::table('kategori')->get();
-        return view('pertanyaan.create_pertanyaan',compact('kategori_id'));
+        return view('pertanyaan.create_pertanyaan',compact('kategori_id', 'kategori'));
     }
 
     /**
@@ -76,8 +79,9 @@ class PertanyaanController extends Controller
      */
     public function show($id)
     {
+       $kategori = kategori::all();
        $pertanyaan = pertanyaan::where('id',$id)->first();
-       return view('pertanyaan.show_pertanyaan',compact('pertanyaan'));
+       return view('pertanyaan.show_pertanyaan',compact('pertanyaan', 'kategori'));
     }
 
     /**
