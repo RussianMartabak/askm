@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use DB; 
 use App\pertanyaan;
+use App\kategori;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PertanyaanController extends Controller
@@ -16,7 +17,8 @@ class PertanyaanController extends Controller
      */
     public function index()
     {
-        //
+        $pertanyaan = pertanyaan::all();
+        return view('pertanyaan.index_pertanyaan', compact('pertanyaan'));
     }
 
     /**
@@ -26,8 +28,8 @@ class PertanyaanController extends Controller
      */
     public function create()
     {
-        $kategori = DB::table('kategori')->get();
-        return view('pertanyaan.create_pertanyaan',compact('kategori'));
+        $kategori_id = DB::table('kategori')->get();
+        return view('pertanyaan.create_pertanyaan',compact('kategori_id'));
     }
 
     /**
@@ -74,7 +76,8 @@ class PertanyaanController extends Controller
      */
     public function show($id)
     {
-        //
+       $pertanyaan = pertanyaan::where('id',$id)->first();
+       return view('pertanyaan.show_pertanyaan',compact('pertanyaan'));
     }
 
     /**
