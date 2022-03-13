@@ -62,7 +62,7 @@ $(document).ready(function() {
         <label>Kategori</label><br>
         <select name="kategori_id" class="js-example-basic-single width:100%;" id="">
             <option value="">---Pilih Kategori---</option>
-            @foreach ($kategori as $item)
+            @foreach ($kategori_id as $item)
                 <option value="{{ $item->id}}">{{ $item->nama_kategori }}</option>
             @endforeach
         </select>    

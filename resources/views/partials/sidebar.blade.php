@@ -27,14 +27,15 @@
         
         <div class="navbar-nav w-100">
             <a href="/" class="nav-item nav-link"><i class="fa fa-home me-2"></i>General</a>
+            <a href="/pertanyaan" class="nav-item nav-link"><i class="fa fa-home me-2"></i>Semua pertanyaan</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Kategori</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    @foreach ($kategori as $unitKategori)
+                    {{-- @foreach ($kategori as $unitKategori)
                         <a href="#" class="dropdown-item">{{$unitKategori->nama_kategori}}</a>
-                    @endforeach
+                    @endforeach --}}
                     <a href="/kategori/create" class="dropdown-item">Tambah Kategori</a>
-                   
+                </div>   
             </div>
         </div>
     </nav>
