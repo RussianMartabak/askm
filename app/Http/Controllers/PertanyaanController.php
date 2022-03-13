@@ -48,7 +48,7 @@ class PertanyaanController extends Controller
             'judul'       => 'required ',
             'content'     => 'required',
             'kategori_id' => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
 
         ],
         [
@@ -58,10 +58,16 @@ class PertanyaanController extends Controller
             'thumbnail.max:2048'       => 'ukuran file terlalu besar'
         ]
         );
-        $imageName = time() . '.' . $request['thumbnail']->extension();
-        $request['thumbnail']->move(public_path('pertanyaan_img'), $imageName);
-
         $pertanyaan = new pertanyaan;
+        $imageName = '';
+        if (empty($request['thumbnail'])) {
+
+        } else {
+            $imageName = time() . '.' . $request['thumbnail']->extension();
+            $request['thumbnail']->move(public_path('pertanyaan_img'), $imageName);
+        }
+        
+        
         $pertanyaan->Judul = $request['judul'];
         $pertanyaan->content = $request['content'];
         $pertanyaan->user_id = Auth::user()->id;
@@ -84,6 +90,9 @@ class PertanyaanController extends Controller
 
        $kategori = kategori::all();
        $pertanyaan = pertanyaan::where('id',$id)->first();
+       foreach ($komentar as $value) {
+           $value->user = komentar::find($value->id)->user->name;
+       }
        return view('pertanyaan.show_pertanyaan',compact('pertanyaan', 'kategori', 'komentar'));
     }
 
