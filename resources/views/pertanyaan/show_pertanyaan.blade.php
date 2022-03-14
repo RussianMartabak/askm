@@ -6,7 +6,7 @@
 
 <div class="container">
     <h2 class="mt-3">{{ $pertanyaan->Judul }}</h2>
-    <h5>Ditanyakan oleh {{ Auth::user()->name }}</h5>
+    <h5>Ditanyakan oleh {{ $pertanyaan->user->name }}</h5>
     {!! $pertanyaan->content !!}
     <img src="{{asset('pertanyaan_img/'. $pertanyaan->thumbnail)}}" alt="">
     <br><br>
