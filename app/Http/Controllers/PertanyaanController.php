@@ -45,7 +45,7 @@ class PertanyaanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul'       => 'required ',
+            'judul'       => 'required|max:100',
             'content'     => 'required',
             'kategori_id' => 'required',
             'thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'

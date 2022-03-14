@@ -15,7 +15,7 @@ class CreatePertanyaanTable extends Migration
     {
         Schema::create('pertanyaan', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Judul',45);
+            $table->string('Judul', 100);
             $table->text('content');
             $table->string('thumbnail',45);
             $table->unsignedBigInteger('kategori_id');
