@@ -17,7 +17,7 @@ Route::get('/', 'IndexController@Index');
   
 Auth::routes();
 
-
+Route::resource('pertanyaan','PertanyaanController');
 
 
 
@@ -26,8 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
     //CRUD kategori
     Route::resource('kategori','KategoriController');
 
-    //CRUD
-    Route::resource('pertanyaan','PertanyaanController');
+    
+    
     //fungsi create untuk comment, pakai post
     Route::post('/komentar/create/{id}', 'KomentarController@create');
 });
