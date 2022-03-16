@@ -11,7 +11,7 @@
     @foreach ($pertanyaan as $q)
     <div class="border p-3">
         <a href="/pertanyaan/{{$q->id}}"><h5>{{$q->Judul}}</h5></a>
-        <p>Posted on {{$pertanyaan->created_at}}</p>
+        <p>Posted on {{$q->created_at}}</p>
     </div>
     @endforeach
     
