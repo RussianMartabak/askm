@@ -32,9 +32,9 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Kategori</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     @foreach ($kategori as $unitKategori)
-                        <a href="#" class="dropdown-item">{{$unitKategori->nama_kategori}}</a>
+                        <a href="#" class="dropdown-item my-2">{{$unitKategori->nama_kategori}}</a>
                     @endforeach 
-                    <a href="/kategori/create" class="dropdown-item">Tambah Kategori</a>
+                    
                 </div>   
             </div>
         </div>
