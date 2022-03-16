@@ -85,7 +85,7 @@
     <script src="{{asset('dashmin/lib/waypoints/waypoints.min.js')}}"></script>
     <script src="{{asset('dashmin/lib/owlcarousel/owl.carousel.min.js')}}"></script>
     <script src="{{asset('dashmin/lib/tempusdominus/js/moment.min.js')}}"></script>
-    <script src="{{asset('dashmin/lib/tempusdominus/js/moment-timezone.min.js'}"></script>
+    <script src="{{asset('dashmin/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('dashmin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 
     <!-- Template Javascript -->

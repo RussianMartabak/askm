@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center ms-4 mb-4">
             @auth
             <div class="position-relative">
-                <img class="rounded-circle" src="{{asset('dashmin/img/user.jpg', true)}}" alt="" style="width: 40px; height: 40px;">
+                <img class="rounded-circle" src="{{asset('dashmin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-3">
@@ -16,7 +16,7 @@
             @endauth
             @guest
             <div class="position-relative">
-                <img class="rounded-circle" src="{{asset('anon.webp', true)}}" alt="" style="width: 40px; height: 40px;">
+                <img class="rounded-circle" src="{{asset('anon.webp')}}" alt="" style="width: 40px; height: 40px;">
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-3">
@@ -32,7 +32,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Kategori</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     @foreach ($kategori as $unitKategori)
-                        <a href="#" class="dropdown-item my-2">{{$unitKategori->nama_kategori}}</a>
+                        <a href="#" class="nav-link dropdown-item my-2">{{$unitKategori->nama_kategori}}</a>
                     @endforeach 
                     
                 </div>   
