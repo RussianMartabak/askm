@@ -29,7 +29,7 @@
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 
-                <span class="d-none d-lg-inline-flex">Belum Login</span>
+                <span class="d-none d-lg-inline-flex">Not Logged In</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                 <a href="/login" class="dropdown-item">Log In</a>
