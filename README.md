@@ -1,2 +1,16 @@
-# AskM  
-A QnA Forum not dissimiliar with Quora but with cleaner interface. Made with Laravel and Bootstrap. Features include posting questions, answering someone's question, etc.
+# ZTS Forum  
+## PKS Digital School Kelompok 4  
+1. Zaky Abdurrahman
+2. Tri Sukisno  
+3. Sugeng M  
+  
+## Tema Project  
+
+Forum Tanya Jawab Sederhana
+
+## ERD  
+  
+![](./erd.jpg "ERD")  
+
+## Link Demo  
+https://zts-forum.herokuapp.com/
