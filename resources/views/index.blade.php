@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    ZTS Forum   
+    AskM  
 @endsection
 @section('content')
 <div class="my-3">
