@@ -11,7 +11,7 @@ class IndexController extends Controller
     //
     function Index() {
         $kategori = kategori::all();
-        $pertanyaan = pertanyaan::all();
+        $pertanyaan = pertanyaan::oldest()->get();
         return view('index', compact('kategori', 'pertanyaan'));
     }
 }
