@@ -6,7 +6,7 @@
 
 <div class="container">
     <h2 class="mt-3">{{ $pertanyaan->Judul }}</h2>
-    <h5>Ditanyakan oleh {{ $pertanyaan->user->name }}</h5>
+    <h5>Asked by <a class="profile-link" href="#" style="color:#191C24">{{ $pertanyaan->user->name }}</a> </h5>
     {!! $pertanyaan->content !!}
     <img src="{{asset('pertanyaan_img/'. $pertanyaan->thumbnail)}}" style="max-width: 640px;" alt="">
     <br><br>
