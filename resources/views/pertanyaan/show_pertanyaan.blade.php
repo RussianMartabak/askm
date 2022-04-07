@@ -19,10 +19,10 @@
     <div class="input-group mb-3">
         <form action="/komentar/create/{{$pertanyaan->id}}" method="POST">
           @csrf
-          <textarea class="form-control my-3" cols="120" name="komentar" rows="5" placeholder="isi komentar disini"></textarea>
+          <textarea class="form-control my-3" cols="120" name="komentar" rows="5" placeholder="Write an answer/comment"></textarea>
          
           <div class="input-group-append">
-          <button class="btn btn-primary" type="submit">Kirim</button>
+          <button class="btn btn-primary" type="submit">Send</button>
         </div>
         </form>
         

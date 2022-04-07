@@ -66,7 +66,12 @@ class KategoriController extends Controller
      */
     public function show($id)
     {
-        //
+        //for showing specific thing based on parameter passed in url
+        $kategoriTarget = kategori::find($id);
+        $kategori = kategori::all();
+        //pertanyaan yang belong to kategori tesebut
+        $pertanyaans = $kategoriTarget->pertanyaan;
+        return view('kategori.show_kategori', compact('kategoriTarget', 'kategori', 'pertanyaans'));
     }
 
     /**
