@@ -25,7 +25,7 @@ Route::group(['middleware' => ['auth']], function () {
     //
     //CRUD kategori
     Route::resource('kategori','KategoriController');
-
+    
     
     
     //fungsi create untuk comment, pakai post

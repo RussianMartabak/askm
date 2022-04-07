@@ -65,10 +65,8 @@ class PertanyaanController extends Controller
         );
         $pertanyaan = new pertanyaan;
         $imageName = '';
-        if (empty($request['thumbnail'])) {
-
-        } else {
-            $imageName = time() . '.' . $request['thumbnail']->extension();
+        if ($request['thumbnail']) {
+            $imageName = time() . Auth::user()->name . '.' . $request['thumbnail']->extension();
             $request['thumbnail']->move(public_path('pertanyaan_img'), $imageName);
         }
         
