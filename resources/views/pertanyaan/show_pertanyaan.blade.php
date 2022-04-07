@@ -8,7 +8,7 @@
     <h2 class="mt-3">{{ $pertanyaan->Judul }}</h2>
     <h5>Ditanyakan oleh {{ $pertanyaan->user->name }}</h5>
     {!! $pertanyaan->content !!}
-    <img src="{{asset('pertanyaan_img/'. $pertanyaan->thumbnail)}}" alt="">
+    <img src="{{asset('pertanyaan_img/'. $pertanyaan->thumbnail)}}" style="max-width: 640px;" alt="">
     <br><br>
     @foreach ($komentar as $item)
       <div class="border p-5">

@@ -5,6 +5,12 @@
     --dark: #191C24;
 }
 
+/**Custom class**/
+.post-img {
+    max-width: 640px;
+}
+
+
 .back-to-top {
     position: fixed;
     display: none;
